@@ -4,17 +4,9 @@ LIMIT = 100
 TIMEOUT_MS = 5000
 
 GET_LANGUAGES_QUERY = """\
-SELECT *
-FROM [{}:lab.github_languages]
-LIMIT {}
 """
 
 GET_LANAGUES_AGGREGATED_QUERY = """\
-SELECT language.name, SUM(language.bytes) language.bytes
-FROM [{}:lab.github_languages]
-GROUP BY language.name
-ORDER BY 2 DESC
-LIMIT {}
 """
 
 
