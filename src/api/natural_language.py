@@ -43,13 +43,8 @@ def analyze_text(text, encoding='UTF8'):
     :type encoding: str
     :return:
     """
-    body = {
-        'document': {
-            'type': 'PLAIN_TEXT',
-            'content': text,
-        },
-        'encoding_type': encoding,
-    }
+    pass
+    body = { } # Build out the body for analyze entities.
     client = get_client()
     request = client.documents().analyzeEntities(body=body)
     response = request.execute()
